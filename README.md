@@ -1,2 +1,17 @@
-# SimpleSnakeGame
-A classic Snake Game implemented using C++, focusing on core programming concepts such as loops, conditions, functions, and basic game logic.  The game runs in the console and includes:  Real-time snake movement  Food generation and score tracking  Collision detection (walls &amp; snake body)  Increasing difficulty as the score grows
+# Simple Console Snake Game
+
+A classic Snake game implemented in C++ for the console.
+
+## Controls
+- **W**: Move Up
+- **A**: Move Left
+- **S**: Move Down
+- **D**: Move Right
+- **X**: Exit game
+
+## How to Compile and Run
+Make sure you have g++ installed. Then run:
+
+```bash
+g++ main.cpp -o snake
+./snake          # On Windows: snake.exe
