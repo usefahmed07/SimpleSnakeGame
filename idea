@@ -1,1 +1,11 @@
+A classic Snake game implemented in C++ for the console.
 
+Control the snake using W, A, S, D.
+
+Eat fruits to grow the tail.
+
+Screen wrapping: the snake appears on the opposite side when reaching edges.
+
+Score tracking and display.
+
+Game ends if the snake collides with itself.
