@@ -225,3 +225,8 @@ int main()
 
     return 0;
 }
+
+// W
+// A 
+// S
+// D
