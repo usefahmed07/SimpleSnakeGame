@@ -1,4 +1,5 @@
 // Project on C++ Simple Snake Game for Fun 
+// Created By Youssef Ahmed at 12/18/2025
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣄⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⠀⠀⢀⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡏⠳⡀⠀⡠⠖⡊⠉⠉⣠⠊⠁⣀⣀⡤⠋⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⢤⠃⠀⣱⣦⣶⡿⢁⠴⣋⣤⣿⣩⠅⠐⠒⠈⠉⠉⠉⠉⠒⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -182,9 +183,12 @@ void Logic()
         break;
     }
 
-    // Collision with wall
-    if (x < 0 || x >= width || y < 0 || y >= height)
-        gameOver = true;
+    // Screen wrapping (زي الفيديو)
+    if (x >= width) x = 0;
+    else if (x < 0) x = width - 1;
+
+    if (y >= height) y = 0;
+    else if (y < 0) y = height - 1;
 
     // Collision with tail
     for (int i = 0; i < nTail; i++)
@@ -197,11 +201,12 @@ void Logic()
     if (x == fruitX && y == fruitY)
     {
         score += 10;
-        fruitX = rand() % (width - 2) + 1;
-        fruitY = rand() % (height - 2) + 1;
+        fruitX = rand() % width;
+        fruitY = rand() % height;
         nTail++;
     }
 }
+
 
 int main()
 {
