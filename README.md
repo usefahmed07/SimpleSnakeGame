@@ -9,9 +9,3 @@ A classic Snake game implemented in C++ for the console.
 - **D**: Move Right
 - **X**: Exit game
 
-## How to Compile and Run
-Make sure you have g++ installed. Then run:
-
-```bash
-g++ main.cpp -o snake
-./snake          # On Windows: snake.exe
